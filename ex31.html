@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+
+</head>
+<body>
+    <h1>Interação de um array</h1>
+    <div id="resultado"></div>
+
+    <h1>Interação de um array par</h1>
+    <div id="resultado_par"></div>
+
+    <h1>Interação de um array impar</h1>
+    <div id="resultado_impar"></div>
+
+    <script>
+        const numeros =[1,2,3,4,5];
+        let resultadoDiv = document.getElementById("resultado");
+        let resultadoDivpar = document.getElementById("resultado_par")
+        let resultadoDivimpar = document.getElementById("resultado_impar")
+
+        let output ="";
+        let output_impar ="";
+        let output_par ="";
+
+        for(const numero of numeros){
+            output += numero + "<br>";
+             if(numero % 2 == 0){
+                output_par += numero + " - ";
+            }else{
+                output_impar += numero + " - ";
+            }
+        }
+        resultadoDiv.innerHTML =output;
+        resultadoDivpar.innerHTML =output_par;
+        resultadoDivimpar.innerHTML =output_impar;
+    </script>
+</body>
+</html>
